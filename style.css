@@ -1,0 +1,328 @@
+/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #e0f2f7 0%, #c1e4ee 100%); /* Light blue gradient background */
+    color: #333;
+    min-height: 100vh;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Overall padding for the body, provides space around the main section */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Contact Section Styling */
+#contact-section {
+    width: 100%; /* Take full width of its parent (body padding controls outer space) */
+    max-width: 1300px; /* ENLARGED: Increased max-width for the overall section */
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white for a clean look */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 40px; /* Internal padding */
+    text-align: center;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    position: relative; /* For potential background elements */
+}
+
+.section-title {
+    font-size: 2.8em;
+    color: #007bff; /* Aqua Blue */
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    text-align: center; /* Centered "CONTACT US" title */
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center; /* Center items when they wrap */
+    gap: 40px; /* Slightly increased space between the two columns for better separation */
+}
+
+.contact-form-side,
+.newsletter-side {
+    flex: 1; /* Allows columns to grow and shrink */
+    min-width: 450px; /* ENLARGED: Increased min-width for individual forms to make them wider */
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 123, 255, 0.15);
+}
+
+.contact-form-side:hover,
+.newsletter-side:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+    font-size: 1.6em;
+    color: #007bff;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 0.98em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cceeff; /* Light blue border */
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #333;
+    background-color: #f8fcff; /* Very light blue background */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+    background-color: #ffffff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button Styling */
+.btn {
+    width: 100%; /* Full width buttons */
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 10px; /* Space above button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow to all buttons */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* --- FIX FOR BLUE SEND BUTTON --- */
+/* Targeting the specific button with its ID for higher specificity */
+#messageForm .message-btn { /* Changed from just .message-btn */
+    background-color: #007bff !important; /* Added !important as a last resort */
+    color: white;
+}
+
+#messageForm .message-btn:hover { /* Changed from just .message-btn:hover */
+    background-color: #0056b3 !important; /* Added !important */
+}
+/* --- END FIX --- */
+
+.subscribe-btn {
+    background-color: #28a745; /* Green button */
+    color: white;
+}
+
+.subscribe-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Feedback Messages */
+.feedback-message {
+    margin-top: 20px;
+    font-size: 0.95em;
+    font-weight: 500;
+    min-height: 20px; /* Reserve space */
+    text-align: center;
+    color: #007bff; /* Default to blue, JS will change for success/error */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-section {
+        padding: 30px 20px; /* Adjust padding for smaller screens */
+        max-width: 100%; /* Allow full width on small screens */
+    }
+
+    .section-title {
+        font-size: 2.2em;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .contact-form-side,
+    .newsletter-side {
+        width: 100%;
+        min-width: unset; /* Remove min-width to allow full flexibility on small screens */
+        padding: 25px;
+    }
+}
+
+/* Water Drop Background Effect (Optional) */
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: -1;
+    opacity: 0.7;
+}
+
+body::before {
+    top: -50px;
+    left: -50px;
+    transform: scale(0.8);
+    animation: float1 10s infinite ease-in-out;
+}
+
+body::after {
+    bottom: -50px;
+    right: -50px;
+    transform: scale(1.2);
+    animation: float2 12s infinite ease-in-out;
+}
+
+@keyframes float1 {
+    0% { transform: translate(0, 0) scale(0.8); }
+    50% { transform: translate(20px, 30px) scale(0.9); }
+    100% { transform: translate(0, 0) scale(0.8); }
+}
+
+@keyframes float2 {
+    0% { transform: translate(0, 0) scale(1.2); }
+    50% { transform: translate(-30px, -20px) scale(1.1); }
+    100% { transform: translate(0, 0) scale(1.2); }
+}
+
+/* Submit Button – Blue Theme */
+.submit-btn {
+    background-color: #007bff !important;
+    color: white !important;
+    border: none;
+    padding: 12px 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    justify-content: center;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 198, 255, 0.3);
+}
+
+.submit-btn:hover {
+    background-color: #00a8e6 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 198, 255, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Optional: Match icon color */
+.submit-btn .send-icon {
+    stroke: white;
+}
+
+
+.subscribe-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transition: transform 0.3s ease;
+}
+
+.subscribe-btn:hover .subscribe-icon {
+    transform: scale(1.1) rotate(15deg);
+    fill: #292421;
+}
+
+
+/* HOVER: Mustard Yellow */
+.subscribe-btn:hover:hover {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 193, 7, 0.4);
+}
+
+/* Icon */
+.submit-btn .send-icon {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+    transition: all 0.3s ease;
+}
+
+/* HOVER: Mustard Yellow */
+.submit-btn:hover {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 193, 7, 0.4);
+}
+
+.submit-btn:hover .send-icon {
+    stroke: #292121;
+    transform: translateX(5px);
+}
+
+/* Dark Mode */
+[data-theme="dark"] .submit-btn {
+    color: #fff !important;
+}
+
+[data-theme="dark"] .submit-btn .send-icon {
+    stroke: #fff;
+}
+
+[data-theme="dark"] .submit-btn:hover {
+    color: #212529 !important;
+}
+
+[data-theme="dark"] .submit-btn:hover .send-icon {
+    stroke: #212529;
+}

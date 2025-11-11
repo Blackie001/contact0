@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaFlow - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+<!-- CONTACT SECTION -->
+    <section id="contact-us" class="contact-section">
+        <h2 class="section-title">CONTACT US</h2>
+        <div class="contact-container">
+            <!-- Left Side: Message Form -->
+            <div class="contact-form-side">
+                <h3>SEND US A MESSAGE</h3>
+                <form id="messageForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">
+                        SEND
+                        <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                    <p id="messageStatus" class="form-status"></p>
+                </form>
+            </div>
+
+            <!-- Right Side: Newsletter Subscription -->
+            <div class="newsletter-side">
+                <h3>SUBSCRIBE TO NEWSLETTER</h3>
+                <form id="newsletterForm" class="newsletter-form">
+                    <div class="form-group">
+                        <label for="newsletterEmail">Email Address</label>
+                        <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="Your Email" required>
+                    </div>
+                  <button type="submit" class="btn subscribe-btn">
+    <span class="btn-content">
+        SUBSCRIBE
+        <svg class="subscribe-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917z"/>
+        </svg>
+    </span>
+</button>
+                    <p id="newsletterStatus" class="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
