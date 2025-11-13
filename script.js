@@ -125,4 +125,27 @@ document.addEventListener("DOMContentLoaded", () => {
         showMessage(newsletterStatus, "Thank you, you have successfully subscribed to our newsletter, you will be receiving all our updates");
         newsletterForm.reset();
     });
+
 });
+
+// Basic contact form validation
+function validateForm() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (name === '' || email === '' || message === '') {
+    alert('Please fill out all fields before submitting.');
+    return false;
+  }
+
+  // Simple email format check
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+
+  alert('Message sent successfully!');
+  return true;
+}
