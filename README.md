@@ -1,3 +1,6 @@
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![HTML](https://img.shields.io/badge/Code-HTML-orange)
+
 ![Progress](https://img.shields.io/badge/Progress-Improving-orange)
 
 
