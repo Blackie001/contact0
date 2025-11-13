@@ -1,3 +1,6 @@
+![Progress](https://img.shields.io/badge/Progress-Improving-orange)
+
+
 # 🧩 Contact Section Webpage
 
 This is a simple **HTML/CSS/JavaScript** project created purely for **learning and experimentation**.  
