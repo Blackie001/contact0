@@ -30,4 +30,4 @@ It’s meant to:
 ## 🚀 How to View
 1. Clone this repository:
    ```bash
-   <https://github.com/Blackie001/contact0/tree/main>
+   [<https://github.com/Blackie001/contact0/tree/main](https://blackie001.github.io/contact0/)
